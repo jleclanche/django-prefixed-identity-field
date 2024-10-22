@@ -1,3 +1,3 @@
 # djang-prefixed-identity-field
 
-A PrefixedIdentityField for django based in UUIDv7
+A PrefixedIdentityField for django based on UUIDv7
