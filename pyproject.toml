@@ -18,6 +18,13 @@ uuid6 = "^2024.7.10"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
+ruff = "^0.7.0"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.format]
+indent-style = "tab"
 
 [build-system]
 requires = ["poetry-core"]
