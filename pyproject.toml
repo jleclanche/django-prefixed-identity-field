@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-prefixed-identity-field"
-version = "0.1.0"
+version = "1.0.0"
 description = "A PrefixedIdentityField for django based on UUIDv7"
 authors = ["Jerome Leclanche <jerome@leclan.ch>"]
 license = "MIT"
