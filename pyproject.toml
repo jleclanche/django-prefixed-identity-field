@@ -17,6 +17,8 @@ base58 = "^2.1.1"
 django = "^5.1.2"
 uuid6 = "^2024.7.10"
 
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
 
 [build-system]
 requires = ["poetry-core"]
