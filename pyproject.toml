@@ -19,6 +19,9 @@ uuid6 = "^2024.7.10"
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
 ruff = "^0.7.0"
+pytest = "^8.3.3"
+pytest-django = "^4.9.0"
+psycopg = "^3.2.3"
 
 [tool.ruff]
 line-length = 88
@@ -29,3 +32,7 @@ indent-style = "tab"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+pythonpath = ["."]
