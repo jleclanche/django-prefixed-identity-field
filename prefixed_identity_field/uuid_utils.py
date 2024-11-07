@@ -18,7 +18,16 @@ def decode_uuid_from_prefixed_value(
 		return UUIDv7(bytes=value.bytes)
 
 	value = value.rpartition(separator)[-1]
-	decoded_value = b58decode(value)
+
+	try:
+		decoded_value = b58decode(value)
+	except ValueError:
+		raise InvalidPrefixedUUID(
+			f"Invalid base58 value: {value!r}",
+			code="invalid",
+			params={"value": value},
+		)
+
 	if len(decoded_value) != 16:
 		raise InvalidPrefixedUUID(
 			f"ID {value!r} does not decode to a valid UUID",
@@ -30,7 +39,7 @@ def decode_uuid_from_prefixed_value(
 		return UUIDv7(bytes=decoded_value)
 	except ValueError:
 		raise InvalidPrefixedUUID(
-			f"Invalid base58 value: {value!r}",
+			f"Invalid UUID: {value!r}",
 			code="invalid",
 			params={"value": value},
 		)
