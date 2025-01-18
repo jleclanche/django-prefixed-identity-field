@@ -51,3 +51,7 @@ class PrefixedIdentityField(UUIDField):
 			return value
 
 		return encode_uuid_to_prefixed_value(value, prefix=self.prefix)
+
+	def get_default(self) -> str:
+		default_uuid = super().get_default()
+		return encode_uuid_to_prefixed_value(default_uuid, prefix=self.prefix)

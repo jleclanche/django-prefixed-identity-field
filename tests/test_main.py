@@ -46,7 +46,6 @@ def test_extract_datetime_from_id():
 	assert extracted_datetime.timestamp() == uuid_obj.time / 1000
 
 
-@pytest.mark.xfail(reason="Fails due to instance.id after save being a UUID")
 @pytest.mark.django_db(transaction=True)
 def test_default_value_and_prefix():
 	# Create an instance without specifying an ID, allowing PrefixedIdentityField to generate it.
