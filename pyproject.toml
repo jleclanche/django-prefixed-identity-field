@@ -1,27 +1,30 @@
-[tool.poetry]
+[project]
 name = "django-prefixed-identity-field"
 version = "1.1.0"
 description = "A PrefixedIdentityField for django based on UUIDv7"
-authors = ["Jerome Leclanche <jerome@leclan.ch>"]
+authors = [{ name = "Jerome Leclanche", email = "jerome@leclan.ch" }]
 license = "MIT"
 readme = "README.md"
+requires-python = ">=3.11"
+
+[project.urls]
 repository = "https://github.com/jleclanche/django-prefixed-identity-field"
-packages = [
-	{ include = "prefixed_identity_field" },
-]
+
+[tool.poetry]
+packages = [{ include = "prefixed_identity_field" }]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
 base58 = "^2.1.1"
-django = "^5.1.2"
+django = "^5.1.5"
 uuid6 = "^2024.7.10"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
-ruff = "^0.7.0"
-pytest = "^8.3.3"
+ruff = "^0.9.2"
+pytest = "^8.3.4"
 pytest-django = "^4.9.0"
-psycopg = "^3.2.3"
+psycopg = "^3.2.4"
 
 [tool.ruff]
 line-length = 88
@@ -30,7 +33,7 @@ line-length = 88
 indent-style = "tab"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
