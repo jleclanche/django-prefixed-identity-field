@@ -1,6 +1,6 @@
 [project]
 name = "django-prefixed-identity-field"
-version = "1.1.0"
+version = "1.2.0"
 description = "A PrefixedIdentityField for django based on UUIDv7"
 authors = [{ name = "Jerome Leclanche", email = "jerome@leclan.ch" }]
 license = "MIT"
